@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-regex-bench",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "bench": "node --enable-experimental-regexp-engine dist/bench.js",
+    "bench:no-linear": "node dist/bench.js",
+    "bench:report": "node --enable-experimental-regexp-engine dist/bench.js --json | node dist/report.js",
+    "bench:test": "node --enable-experimental-regexp-engine dist/bench.js --json --test | node dist/report.js"
+  },
+  "dependencies": {
+    "@mitata/counters": "^0.0.8",
+    "cmd-ts": "^0.15.0",
+    "mitata": "^1.0.34",
+    "re2": "^1.24.0",
+    "re2-wasm": "^1.0.2",
+    "re2js": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "typescript": "^6.0.2"
+  },
+  "engines": {
+    "node": ">=24.0"
+  },
+  "volta": {
+    "node": "24.14.0",
+    "yarn": "1.22.22"
+  },
+  "packageManager": "yarn@4.13.0"
+}
